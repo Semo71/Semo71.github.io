@@ -1,0 +1,25 @@
+:root{
+  --bg:#fbfbfd;
+  --surface:#ffffff;
+  --muted-surface:#f4f5f7;
+  --text:#0b1220;
+  --muted:#5b6477;
+  --primary:#1f6fff; /* subtle blue */
+}
+
+[data-theme="dark"]{
+  --bg:#0b0f17;
+  --surface:#0f1522;
+  --muted-surface:#0c121e;
+  --text:#eaf0ff;
+  --muted:#9aa6bf;
+  --border: rgba(234,240,255,.10);
+  --primary:#5aa0ff;
+}
+
+body{
+  background:
+    radial-gradient(900px 400px at 10% -10%, rgba(90,160,255,.10), transparent 60%),
+    radial-gradient(900px 400px at 90% -10%, rgba(18,185,129,.06), transparent 60%),
+    var(--bg);
+}

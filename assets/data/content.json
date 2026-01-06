@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "siteName": "Osamah Fatah",
+    "defaultLang": "en"
+  },
+  "profile": {
+    "name": {
+      "en": "Osamah Fatah",
+      "ar": "أسامة فتّاح"
+    },
+    "role": {
+      "en": "Software Developer (Mobile/Backend)",
+      "ar": "مطوّر برمجيات (موبايل/باك-إند)"
+    },
+    "tagline": {
+      "en": "I build sleek mobile apps and reliable backends — clean architecture, pixel-care UI, zero-nonsense code.",
+      "ar": "أطوّر تطبيقات موبايل أنيقة وباك-إند يعتمد عليه — هندسة نظيفة، واجهات تهتم بالتفاصيل، وكود بدون فوضى."
+    },
+    "about": {
+      "en": "I’m Osamah, a software developer focused on Mobile (Flutter & Native Android) and backend when the product needs it. I care about clean structure (SOLID), smooth UX/UI, and shipping apps that stay stable under real users. I’ve built and published apps for companies and clients, and I’m always learning the next tool that improves quality and speed.",
+      "ar": "أنا أسامة، مطوّر برمجيات أركّز على تطبيقات الموبايل (Flutter وAndroid Native) وأدخل على الباك-إند وقت ما يحتاج المنتج. أحب الكود المرتّب (SOLID)، وتجربة المستخدم السلسة، وتسليم تطبيقات “تعيش” مع المستخدم الحقيقي. اشتغلت على تطبيقات لشركات وعملاء، ودائمًا أتعلّم أي أداة ترفع الجودة والسرعة."
+    }
+  },
+  "contact": {
+    "email": "osamahfatah@gmail.com",
+    "phone": "+966553536273",
+    "whatsapp": "+966553536273",
+    "location": {
+      "en": "Saudi Arabia",
+      "ar": "السعودية"
+    },
+    "github": "https://github.com/Semo71",
+    "linkedin": "https://www.linkedin.com/in/osamah-fatah-5729bb124/",
+    "resumePath": "assets/Osamah_Fatah_Resume.pdf"
+  },
+  "sections": {
+    "services": [
+      {
+        "title": {
+          "en": "Mobile Apps",
+          "ar": "تطبيقات موبايل"
+        },
+        "desc": {
+          "en": "End-to-end mobile apps with polished UX and maintainable architecture.",
+          "ar": "تطبيقات موبايل متكاملة بواجهة مصقولة وهندسة قابلة للصيانة."
+        }
+      },
+      {
+        "title": {
+          "en": "Flutter & Android",
+          "ar": "Flutter وAndroid"
+        },
+        "desc": {
+          "en": "Flutter for speed, Native Android when you need deep platform control.",
+          "ar": "Flutter للسرعة، وAndroid Native عندما تحتاج تحكّمًا عميقًا بالمنصّة."
+        }
+      },
+      {
+        "title": {
+          "en": "Backend Support",
+          "ar": "دعم باك-إند"
+        },
+        "desc": {
+          "en": "REST APIs and data integration so your app stays fast and consistent.",
+          "ar": "واجهات REST وتكامل بيانات لتطبيق سريع ومتّسق."
+        }
+      }
+    ],
+    "skills": [
+      "Flutter (Dart)",
+      "Android (Kotlin)",
+      "Jetpack Compose",
+      "RESTful APIs",
+      "Firebase",
+      "Room DB",
+      "Git",
+      "SOLID Principles",
+      "UX/UI Design",
+      "Testing & Debugging",
+      "Google Cloud APIs"
+    ],
+    "experience": [
+      {
+        "company": "Lugmety",
+        "title": {
+          "en": "Mobile App Developer",
+          "ar": "مطوّر تطبيقات موبايل"
+        },
+        "dates": {
+          "en": "Aug 2023 — Present",
+          "ar": "أغسطس 2023 — حتى الآن"
+        },
+        "bullets": {
+          "en": [
+            "Built and maintained mobile features with a focus on stability and UX polish.",
+            "Collaborated with cross-functional teams to deliver releases on schedule."
+          ],
+          "ar": [
+            "تطوير وصيانة ميزات موبايل مع التركيز على الاستقرار وتجربة المستخدم.",
+            "التعاون مع الفرق المختلفة لتسليم الإصدارات في وقتها."
+          ]
+        }
+      },
+      {
+        "company": "Drovox",
+        "title": {
+          "en": "Android Developer",
+          "ar": "مطوّر Android"
+        },
+        "dates": {
+          "en": "Feb 2023 — Aug 2023",
+          "ar": "فبراير 2023 — أغسطس 2023"
+        },
+        "bullets": {
+          "en": [
+            "Delivered Android screens and flows with clean, testable structure.",
+            "Integrated APIs and improved user-facing performance."
+          ],
+          "ar": [
+            "تنفيذ شاشات وتدفّقات Android بهندسة نظيفة قابلة للاختبار.",
+            "ربط واجهات API وتحسين الأداء للمستخدم."
+          ]
+        }
+      },
+      {
+        "company": "KSB IT Solution",
+        "title": {
+          "en": "Native Android / Flutter Developer",
+          "ar": "مطوّر Android وFlutter"
+        },
+        "dates": {
+          "en": "Oct 2019 — Feb 2023",
+          "ar": "أكتوبر 2019 — فبراير 2023"
+        },
+        "bullets": {
+          "en": [
+            "Shipped client apps across Android and Flutter, from UI to integrations.",
+            "Applied SOLID principles and reusable components to speed up delivery."
+          ],
+          "ar": [
+            "تسليم تطبيقات للعملاء على Android وFlutter من الواجهة إلى التكاملات.",
+            "تطبيق مبادئ SOLID ومكوّنات قابلة لإعادة الاستخدام لتسريع التسليم."
+          ]
+        }
+      },
+      {
+        "company": "Freelance",
+        "title": {
+          "en": "Mobile App Developer",
+          "ar": "مطوّر تطبيقات موبايل"
+        },
+        "dates": {
+          "en": "Oct 2018 — Present",
+          "ar": "أكتوبر 2018 — حتى الآن"
+        },
+        "bullets": {
+          "en": [
+            "Built apps for different domains with a strong focus on usability.",
+            "Provided maintenance, improvements, and production support."
+          ],
+          "ar": [
+            "بناء تطبيقات لمجالات مختلفة مع تركيز قوي على سهولة الاستخدام.",
+            "تقديم صيانة وتحسينات ودعم للإنتاج."
+          ]
+        }
+      }
+    ],
+    "projects": [
+      {
+        "name": "Lugmety App",
+        "desc": {
+          "en": "Company product — contributed to mobile features, quality, and release readiness.",
+          "ar": "منتج الشركة — المساهمة في ميزات الموبايل والجودة وجهوزية النشر."
+        },
+        "tags": [
+          "Mobile",
+          "Flutter/Android"
+        ],
+        "links": [
+          {
+            "label": {
+              "en": "Add link",
+              "ar": "أضف رابط"
+            },
+            "url": ""
+          }
+        ]
+      },
+      {
+        "name": "Drovox App",
+        "desc": {
+          "en": "Android application — delivered UI flows, API integration, and performance improvements.",
+          "ar": "تطبيق Android — تنفيذ تدفّقات الواجهة، ربط API، وتحسين الأداء."
+        },
+        "tags": [
+          "Android",
+          "Kotlin"
+        ],
+        "links": [
+          {
+            "label": {
+              "en": "Add link",
+              "ar": "أضف رابط"
+            },
+            "url": ""
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": {
+          "en": "Arab Open University",
+          "ar": "الجامعة العربية المفتوحة"
+        },
+        "degree": {
+          "en": "BSc in Information Technology",
+          "ar": "بكالوريوس تقنية معلومات"
+        },
+        "dates": "2019"
+      }
+    ],
+    "certifications": [
+      {
+        "title": {
+          "en": "English Course — Connect English Institute",
+          "ar": "دورة لغة إنجليزية — معهد Connect English"
+        },
+        "details": {
+          "en": "6 months — California, USA (2014)",
+          "ar": "6 أشهر — كاليفورنيا، الولايات المتحدة (2014)"
+        }
+      }
+    ]
+  }
+}
