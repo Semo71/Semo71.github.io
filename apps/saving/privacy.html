@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saving — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Saving expense management app" />
+  <style>
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;
+      background:#fbfbfd;
+      color:#0b1220;
+      line-height:1.7;
+    }
+    .container{max-width:820px;margin:0 auto;padding:40px 18px}
+    h1,h2{letter-spacing:-0.02em}
+    h1{font-size:34px;margin-bottom:10px}
+    h2{font-size:20px;margin-top:30px}
+    .muted{color:#5b6477}
+    .lang-switch{margin-bottom:30px}
+    .lang-switch button{
+      border:1px solid #ddd;
+      background:white;
+      padding:8px 14px;
+      border-radius:999px;
+      cursor:pointer;
+      margin-right:8px;
+    }
+    .logo{width:72px;margin-bottom:20px}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="logo.png" alt="Saving App Logo" class="logo" />
+
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ar')">العربية</button>
+  </div>
+
+  <div id="content-en">
+    <h1>Privacy Policy for Saving</h1>
+    <p class="muted">Last updated: January 06, 2026</p>
+
+    <p>Saving (“the App”) is an expense management application designed to help users track and organize their personal expenses.</p>
+
+    <h2>Information Collection and Use</h2>
+    <p>Saving collects and store your data on external servers.</p>
+
+    <h2>Data Storage</h2>
+    <ul>
+      <li>All data is stored on the system servers.</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>The app does not use advertising, analytics, or tracking services.</p>
+
+    <h2>Children’s Privacy</h2>
+    <p>The app is not intended for children under the age of 13.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <strong>osamahfatah@gmail.com</strong></p>
+  </div>
+
+  <div id="content-ar" style="display:none" dir="rtl">
+    <h1>سياسة الخصوصية لتطبيق Saving</h1>
+    <p class="muted">آخر تحديث: January 06, 2026</p>
+
+    <p>تطبيق Saving هو تطبيق لإدارة المصروفات الشخصية.</p>
+
+    <h2>جمع واستخدام البيانات</h2>
+    <p>يقوم التطبيق بجمع و تخزين البيانات في خوادم النظام.</p>
+
+    <h2>تخزين البيانات</h2>
+    <ul>
+      <li>يتم تخزين جميع البيانات على خوادم النظام.</li>
+    </ul>
+
+    <h2>خدمات الطرف الثالث</h2>
+    <p>لا يستخدم التطبيق أي أدوات إعلانية أو تحليلية.</p>
+
+    <h2>خصوصية الأطفال</h2>
+    <p>التطبيق غير موجه للأطفال دون سن 13 عامًا.</p>
+
+    <h2>التواصل</h2>
+    <p>البريد الإلكتروني: <strong>osamahfatah@gmail.com</strong></p>
+  </div>
+</div>
+
+<script>
+function setLang(lang){
+  document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+  document.getElementById('content-ar').style.display = lang === 'ar' ? 'block' : 'none';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+</script>
+
+</body>
+</html>

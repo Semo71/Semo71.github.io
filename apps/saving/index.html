@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saving — Expense Manager</title>
+  <meta name="description" content="Saving — manage your expenses with a clean, offline-first experience." />
+  <style>
+    :root{
+      --bg:#fbfbfd;
+      --surface:#ffffff;
+      --muted:#5b6477;
+      --text:#0b1220;
+      --border:rgba(15,23,42,.10);
+      --primary:#1f6fff;
+      --radius:18px;
+      --shadow:0 12px 30px rgba(15,23,42,.08);
+      --shadow-soft:0 10px 22px rgba(15,23,42,.06);
+      --max: 980px;
+    }
+    [data-theme="dark"]{
+      --bg:#0b0f17;
+      --surface:#0f1522;
+      --muted:#9aa6bf;
+      --text:#eaf0ff;
+      --border: rgba(234,240,255,.10);
+      --primary:#5aa0ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,system-ui,sans-serif;
+      background:
+        radial-gradient(900px 400px at 10% -10%, rgba(90,160,255,.10), transparent 60%),
+        radial-gradient(900px 400px at 90% -10%, rgba(18,185,129,.06), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .top{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:saturate(180%) blur(14px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .top__inner{height:64px;display:flex;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:600}
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--primary);box-shadow:0 10px 18px rgba(47,109,255,.22)}
+    .spacer{flex:1}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid transparent;
+      cursor:pointer;user-select:none;
+      transition: transform 180ms ease, opacity 180ms ease, background 180ms ease, border 180ms ease;
+      font:inherit;
+    }
+    .btn:active{transform:scale(.98)}
+    .btn--ghost{background:transparent;border-color:var(--border)}
+    .btn--ghost:hover{background:rgba(0,0,0,.03)}
+    [data-theme="dark"] .btn--ghost:hover{background:rgba(255,255,255,.04)}
+    .btn--solid{background:var(--primary);color:#fff;box-shadow:0 12px 22px rgba(31,111,255,.22)}
+    .btn--solid:hover{opacity:.94}
+    .hero{padding:54px 0 26px}
+    .hero__grid{display:grid;gap:16px}
+    @media(min-width:900px){.hero__grid{grid-template-columns:1.2fr .8fr;align-items:stretch}}
+    .kicker{margin:0 0 12px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+    h1{margin:0 0 14px;font-size:clamp(28px,4vw,44px);letter-spacing:-0.03em;line-height:1.1}
+    .sub{margin:0 0 18px;color:var(--muted);max-width:65ch}
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);
+      padding:18px;
+    }
+    .logoWrap{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px}
+    .meta{color:var(--muted);font-size:13px}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .feature h3{margin:0 0 8px;font-size:16px;letter-spacing:-0.01em}
+    .feature p{margin:0;color:var(--muted)}
+    .section{padding:52px 0}
+    .section h2{margin:0 0 10px;font-size:24px;letter-spacing:-0.02em}
+    .screens{border:1px dashed var(--border);border-radius:var(--radius);padding:18px;color:var(--muted)}
+    footer{padding:26px 0;border-top:1px solid var(--border)}
+    .footerInner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    [dir="rtl"] .sub, [dir="rtl"] .meta{direction:rtl}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container top__inner">
+      <a class="brand" href="../index.html" aria-label="Back to apps">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="brandName">Saving</span>
+      </a>
+      <span class="spacer"></span>
+      <button class="btn btn--ghost" id="langBtn" type="button">EN/AR</button>
+      <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">◐</button>
+      <a class="btn btn--ghost" id="privacyBtn" href="./privacy.html">Privacy</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <p class="kicker" id="kicker">Expense manager</p>
+          <h1 id="headline">Track your expenses with a clean, offline-first experience.</h1>
+          <p class="sub" id="sub">
+            Saving helps you record spending, group it into categories, and stay aware of your monthly habits — without accounts, ads, or tracking.
+          </p>
+          <div class="ctaRow">
+            <a class="btn btn--solid" href="#" id="storeBtn">Get the app</a>
+            <a class="btn btn--ghost" href="./privacy.html" id="privacyBtn2">Read privacy policy</a>
+          </div>
+          <p class="meta" id="meta">Local-only data • No tracking • Simple, fast UI</p>
+        </div>
+
+        <div class="card">
+          <div class="logoWrap">
+            <img class="logo" src="logo.png" alt="Saving logo" />
+            <div>
+              <div style="font-weight:600;letter-spacing:-0.01em" id="appName">Saving</div>
+              <div class="meta" id="appTag">Personal expense tracker</div>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          <div class="grid">
+            <div class="feature">
+              <h3 id="f1t">Fast logging</h3>
+              <p id="f1d">Add expenses in seconds.</p>
+            </div>
+            <div class="feature">
+              <h3 id="f2t">Categories</h3>
+              <p id="f2d">Keep spending organised.</p>
+            </div>
+            <div class="feature">
+              <h3 id="f3t">Offline-first</h3>
+              <p id="f3d">Your data stays on your phone.</p>
+            </div>
+          </div>
+          <div style="height:14px"></div>
+          <div class="screens" id="screens">
+            Screenshots coming soon — drop your images here later.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 id="whyTitle">Why Saving?</h2>
+        <div class="grid">
+          <div class="card feature">
+            <h3 id="w1t">Minimal by design</h3>
+            <p id="w1d">No clutter. Just what you need to understand your spending.</p>
+          </div>
+          <div class="card feature">
+            <h3 id="w2t">Private by default</h3>
+            <p id="w2d">No accounts, no cloud, no data selling.</p>
+          </div>
+          <div class="card feature">
+            <h3 id="w3t">Built for consistency</h3>
+            <p id="w3d">Simple flows that help you keep the habit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerInner">
+      <span class="meta">© <span id="year"></span> Saving</span>
+      <a class="meta" href="../index.html" id="backApps">Back to apps</a>
+    </div>
+  </footer>
+
+<script>
+  const KEY_LANG = "saving_lang";
+  const KEY_THEME = "saving_theme";
+  const dict = {
+    en: {
+      brandName:"Saving",
+      kicker:"Expense manager",
+      headline:"Track your expenses with a clean, offline-first experience.",
+      sub:"Saving helps you record spending, group it into categories, and stay aware of your monthly habits — without accounts, ads, or tracking.",
+      meta:"Local-only data • No tracking • Simple, fast UI",
+      appName:"Saving",
+      appTag:"Personal expense tracker",
+      f1t:"Fast logging", f1d:"Add expenses in seconds.",
+      f2t:"Categories", f2d:"Keep spending organised.",
+      f3t:"Offline-first", f3d:"Your data stays on your phone.",
+      screens:"Screenshots coming soon — drop your images here later.",
+      whyTitle:"Why Saving?",
+      w1t:"Minimal by design", w1d:"No clutter. Just what you need to understand your spending.",
+      w2t:"Private by default", w2d:"No accounts, no cloud, no data selling.",
+      w3t:"Built for consistency", w3d:"Simple flows that help you keep the habit.",
+      privacy:"Privacy",
+      readPrivacy:"Read privacy policy",
+      getApp:"Get the app",
+      backApps:"Back to apps"
+    },
+    ar: {
+      brandName:"Saving",
+      kicker:"إدارة المصروفات",
+      headline:"تتبّع مصروفاتك بتجربة نظيفة وتعمل بدون إنترنت.",
+      sub:"يساعدك Saving على تسجيل المصروفات وتصنيفها وفهم عاداتك الشهرية — بدون حسابات، بدون إعلانات، وبدون تتبّع.",
+      meta:"بيانات محلية • بدون تتبع • واجهة بسيطة وسريعة",
+      appName:"Saving",
+      appTag:"متعقّب مصروفات شخصي",
+      f1t:"إضافة سريعة", f1d:"سجّل المصروف خلال ثوانٍ.",
+      f2t:"تصنيفات", f2d:"رتّب مصروفاتك بوضوح.",
+      f3t:"Offline أولًا", w1d:"بياناتك تبقى على جهازك.",
+      f3d:"بياناتك تبقى على جوالك.",
+      screens:"الصور قريبًا — أضف لقطات الشاشة هنا لاحقًا.",
+      whyTitle:"ليش Saving؟",
+      w1t:"بساطة مقصودة", w1d:"بدون زحمة. فقط ما تحتاجه لفهم مصروفاتك.",
+      w2t:"خصوصية افتراضيًا", w2d:"بدون حسابات، بدون سحابة، وبدون بيع بيانات.",
+      w3t:"مصمّم للاستمرار", w3d:"تدفّقات سهلة تساعدك تلتزم.",
+      privacy:"الخصوصية",
+      readPrivacy:"اقرأ سياسة الخصوصية",
+      getApp:"حمّل التطبيق",
+      backApps:"العودة للتطبيقات"
+    }
+  };
+
+  function getLang(){ return localStorage.getItem(KEY_LANG) || "en"; }
+  function setLang(lang){
+    localStorage.setItem(KEY_LANG, lang);
+    document.documentElement.lang = lang === "ar" ? "ar" : "en";
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    const d = dict[lang];
+    for (const id in d){
+      const el = document.getElementById(id);
+      if (el) el.textContent = d[id];
+    }
+    document.getElementById("privacyBtn").textContent = d.privacy;
+    document.getElementById("privacyBtn2").textContent = d.readPrivacy;
+    document.getElementById("storeBtn").textContent = d.getApp;
+    document.getElementById("backApps").textContent = d.backApps;
+  }
+
+  function getTheme(){
+    const stored = localStorage.getItem(KEY_THEME);
+    if (stored) return stored;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  function setTheme(t){
+    localStorage.setItem(KEY_THEME, t);
+    document.documentElement.dataset.theme = t;
+  }
+
+  document.getElementById("langBtn").addEventListener("click", ()=>{
+    setLang(getLang() === "ar" ? "en" : "ar");
+  });
+  document.getElementById("themeBtn").addEventListener("click", ()=>{
+    setTheme(getTheme() === "dark" ? "light" : "dark");
+  });
+
+  // Store placeholder (update later)
+  document.getElementById("storeBtn").addEventListener("click",(e)=>{
+    e.preventDefault();
+    alert("Add your App Store / Google Play link here.");
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  setTheme(getTheme());
+  setLang(getLang());
+</script>
+</body>
+</html>

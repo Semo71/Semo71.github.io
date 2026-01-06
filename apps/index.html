@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apps — Osamah Fatah</title>
+  <meta name="description" content="Applications by Osamah Fatah" />
+  <style>
+    :root{
+      --bg:#fbfbfd;--surface:#fff;--muted:#5b6477;--text:#0b1220;
+      --border:rgba(15,23,42,.10);--primary:#1f6fff;--radius:18px;
+      --shadow-soft:0 10px 22px rgba(15,23,42,.06);--max: 980px;
+    }
+    [data-theme="dark"]{--bg:#0b0f17;--surface:#0f1522;--muted:#9aa6bf;--text:#eaf0ff;--border:rgba(234,240,255,.10);--primary:#5aa0ff;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,system-ui,sans-serif;
+      background:
+        radial-gradient(900px 400px at 10% -10%, rgba(90,160,255,.10), transparent 60%),
+        radial-gradient(900px 400px at 90% -10%, rgba(18,185,129,.06), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .top{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:saturate(180%) blur(14px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .top__inner{height:64px;display:flex;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:600}
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--primary);box-shadow:0 10px 18px rgba(47,109,255,.22)}
+    .spacer{flex:1}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 14px;border-radius:999px;border:1px solid transparent;
+      cursor:pointer;user-select:none;font:inherit;
+      transition: transform 180ms ease, opacity 180ms ease, background 180ms ease, border 180ms ease;
+    }
+    .btn:active{transform:scale(.98)}
+    .btn--ghost{background:transparent;border-color:var(--border)}
+    .btn--ghost:hover{background:rgba(0,0,0,.03)}
+    [data-theme="dark"] .btn--ghost:hover{background:rgba(255,255,255,.04)}
+    .hero{padding:54px 0 18px}
+    .kicker{margin:0 0 12px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+    h1{margin:0 0 14px;font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;line-height:1.1}
+    .sub{margin:0;color:var(--muted);max-width:65ch}
+    .cards{display:grid;gap:14px;padding:22px 0 60px}
+    @media(min-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+    .card{
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);padding:18px;display:flex;gap:14px;align-items:center;
+    }
+    .logo{width:56px;height:56px}
+    .title{font-weight:700;letter-spacing:-0.01em}
+    .muted{color:var(--muted)}
+    .links{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+    .links a{color:var(--primary);font-weight:600;font-size:13px}
+    .links a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container top__inner">
+      <a class="brand" href="../index.html" aria-label="Back to portfolio">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="brandText">Apps</span>
+      </a>
+      <span class="spacer"></span>
+      <button class="btn btn--ghost" id="langBtn" type="button">EN/AR</button>
+      <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="kicker" id="kicker">Applications</p>
+      <h1 id="headline">Small, focused apps with clean UX.</h1>
+      <p class="sub" id="sub">Each app page includes details and a privacy policy link for stores.</p>
+    </section>
+
+    <section class="cards">
+      <a class="card" href="./saving/index.html">
+        <img class="logo" src="./saving/logo.png" alt="Saving logo" />
+        <div>
+          <div class="title" id="savingTitle">Saving</div>
+          <div class="muted" id="savingDesc">Expense manager — offline-first.</div>
+          <div class="links">
+            <a href="./saving/index.html" id="viewApp">View</a>
+            <a href="./saving/privacy.html" id="viewPrivacy">Privacy Policy</a>
+          </div>
+        </div>
+      </a>
+    </section>
+  </main>
+
+<script>
+  const KEY_LANG="apps_lang";
+  const KEY_THEME="apps_theme";
+  const dict={
+    en:{
+      brandText:"Apps",
+      kicker:"Applications",
+      headline:"Small, focused apps with clean UX.",
+      sub:"Each app page includes details and a privacy policy link for stores.",
+      savingDesc:"Expense manager — offline-first.",
+      viewApp:"View",
+      viewPrivacy:"Privacy Policy"
+    },
+    ar:{
+      brandText:"التطبيقات",
+      kicker:"التطبيقات",
+      headline:"تطبيقات بسيطة ومركّزة بتجربة مستخدم نظيفة.",
+      sub:"كل تطبيق لديه صفحة تعريف ورابط سياسة الخصوصية للمتاجر.",
+      savingDesc:"إدارة مصروفات — يعمل بدون إنترنت.",
+      viewApp:"عرض",
+      viewPrivacy:"سياسة الخصوصية"
+    }
+  };
+  function getLang(){return localStorage.getItem(KEY_LANG)||"en";}
+  function setLang(l){
+    localStorage.setItem(KEY_LANG,l);
+    document.documentElement.lang=l==="ar"?"ar":"en";
+    document.documentElement.dir=l==="ar"?"rtl":"ltr";
+    const d=dict[l];
+    for(const id in d){
+      const el=document.getElementById(id);
+      if(el) el.textContent=d[id];
+    }
+  }
+  function getTheme(){
+    const s=localStorage.getItem(KEY_THEME);
+    if(s) return s;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";
+  }
+  function setTheme(t){localStorage.setItem(KEY_THEME,t);document.documentElement.dataset.theme=t;}
+  document.getElementById("langBtn").addEventListener("click",()=>setLang(getLang()==="ar"?"en":"ar"));
+  document.getElementById("themeBtn").addEventListener("click",()=>setTheme(getTheme()==="dark"?"light":"dark"));
+  setTheme(getTheme());setLang(getLang());
+</script>
+</body>
+</html>

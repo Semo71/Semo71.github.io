@@ -4,7 +4,7 @@
 
   const dict = {
     en: {
-      nav: { about:"About", projects:"Projects", experience:"Experience", skills:"Skills", education:"Education", contact:"Contact" },
+      nav: { about:"About", projects:"Projects", apps:"Apps", experience:"Experience", skills:"Skills", education:"Education", contact:"Contact" },
       cta: { resume:"Resume", viewWork:"View work", emailMe:"Email me", whatsappMe:"WhatsApp me", send:"Send" },
       labels: {
         location:"Location", focus:"Focus", focusValue:"Mobile • Backend",
@@ -36,7 +36,7 @@
       ]
     },
     ar: {
-      nav: { about:"نبذة", projects:"المشاريع", experience:"الخبرة", skills:"المهارات", education:"التعليم", contact:"تواصل" },
+      nav: { about:"نبذة", projects:"المشاريع", apps:"التطبيقات", experience:"الخبرة", skills:"المهارات", education:"التعليم", contact:"تواصل" },
       cta: { resume:"السيرة", viewWork:"شاهد الأعمال", emailMe:"راسلني", whatsappMe:"واتساب", send:"إرسال" },
       labels: {
         location:"الموقع", focus:"التركيز", focusValue:"موبايل • باك-إند",
